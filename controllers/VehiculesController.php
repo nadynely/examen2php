@@ -30,6 +30,11 @@ class VehiculesController {
         Header('Location: '. url('vehicules'));
     }
 
+    public function edit($id) {
+        $vehicule = Vehicule::findOne($id);
+        view('vehicules.add', compact('vehicule'));
+    }
+
     public function delete($id) {
 
         $vehicule = Vehicule::findOne($id);

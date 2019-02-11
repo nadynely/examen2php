@@ -1,18 +1,19 @@
 <?php
 
-
 $routes = new Router;
 
 $routes->get('/conducteurs',            'ConducteursController@index');
 $routes->get('/conducteurs/(\d+)',      'ConducteursController@show');
 $routes->get('/conducteurs/add',        'ConducteursController@add');
 $routes->post('/conducteurs/save',       'ConducteursController@save');
+$routes->get('/conducteurs/(\d+)/edit', 'ConducteursController@edit');
 $routes->get('/conducteurs/(\d+)/delete','ConducteursController@delete');
 
 $routes->get('/vehicules',            'VehiculesController@index');
 $routes->get('/vehicules/(\d+)',      'VehiculesController@show');
 $routes->get('/vehicules/add',        'VehiculesController@add');
 $routes->post('/vehicules/save',       'VehiculesController@save');
+$routes->get('/vehicules/(\d+)/edit', 'VehiculesController@edit');
 $routes->get('/vehicules/(\d+)/delete','VehiculesController@delete');
 
 $routes->get('/associations',            'AssociationsController@index');
@@ -25,6 +26,6 @@ $routes->get('/',  'PagesController@home');
 
 //Si j'ai le temps de faire exercice 5 : indiquer l'affichage des données dans cette page:
 
-/* $routes->get('/divers',  'PagesController@divers'); */
+$routes->get('/divers',  'PagesController@divers');
 
 $routes->run();

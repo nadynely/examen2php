@@ -127,7 +127,7 @@ class Vehicule extends Db {
     public function setImmatriculation($immatriculation)
     {
          if (strlen($immatriculation) == 0) {
-            throw new Exception('L\'immatriculation du véhicule doit être indiquée.');
+            throw new Exception('La plaque minéralogique du véhicule doit être indiquée.');
         }
 
         $this->immatriculation = $immatriculation;

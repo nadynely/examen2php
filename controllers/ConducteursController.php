@@ -29,6 +29,11 @@ class ConducteursController {
 
     }
 
+    public function edit($id) {
+        $conducteur = Conducteur::findOne($id);
+        view('conducteurs.add', compact('conducteur'));
+    }
+
 
     public function delete($id) {
         $conducteur = Conducteur::findOne($id);
