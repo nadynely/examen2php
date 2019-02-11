@@ -1,6 +1,6 @@
 <?php
 
-class VehiculeConducteur extends Db {
+class Association extends Db {
     
     protected $id;
     protected $idVehicule;
@@ -136,7 +136,7 @@ class VehiculeConducteur extends Db {
 
             foreach ($data as $d) {
 
-                $objectsList[] = new VehiculeConducteur($d['id_vehicule'], $d['id_conducteur'], intval($d['id']));
+                $objectsList[] = new Association($d['id_vehicule'], $d['id_conducteur'], intval($d['id']));
             }
 
             return $objectsList;
@@ -153,7 +153,7 @@ class VehiculeConducteur extends Db {
             $objectsList = [];
 
             foreach ($data as $d) {
-                $objectsList[] = new VehiculeConducteur($d['id_vehicule'], $d['id_conducteur'], intval($d['id']));
+                $objectsList[] = new Association($d['id_vehicule'], $d['id_conducteur'], intval($d['id']));
 
             }
             return $objectsList;
@@ -174,7 +174,7 @@ class VehiculeConducteur extends Db {
         else return;
 
         if ($object) {
-            $association = new VehiculeConducteur($d['id_vehicule'], $d['id_conducteur'], intval($d['id']));
+            $association = new Association($d['id_vehicule'], $d['id_conducteur'], intval($d['id']));
             return $association;
         }
 
